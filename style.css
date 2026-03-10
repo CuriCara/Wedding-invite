@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #FDFBF7;
+    color: #6B705C;
+    line-height: 1.6;
+    position: relative;
+}
+
+/* Фоновый узор */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-botanical.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.content {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Hero */
+.hero .subtitle {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #A5A58D;  
+    margin-bottom: 20px;
+}
+
+.hero .main-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 200px;
+    font-weight: 400;
+    color: #505745; 
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero .names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #6B705C;
+    margin: 30px 0;
+}
+
+.hero .titleForPoint {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    color: #6B705C;  
+}
+
+.hero .amp {
+    font-size: 36px;
+    color: #A5A58D;  
+}
+
+.hero .date {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #8D9980;  
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Приветствие */
+.greeting-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    color: #505745;  
+    margin-bottom: 30px;
+}
+
+.greeting-text {
+    font-size: 20px;  
+    color: #6B705C;  
+    line-height: 2;
+    margin-bottom: 40px;
+    text-align: right;
+    padding-right: 125px;
+}
+
+.wedding-date {
+    font-size: 24px; 
+    letter-spacing: 3px;
+    color: #8D9980;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+/* Заголовки секций */
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    color: #505745; 
+    margin-bottom: 40px;
+}
+
+/* Локация */
+.location-text {
+    font-size: 22px;  
+    color: #6B705C;  
+    line-height: 1.8;
+}
+
+/* Тайминг */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.time-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;  
+}
+
+.time-item .time {
+    font-family: 'Great Vibes', cursive; 
+    font-size: 42px;  
+    color: #505745;  
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.time-item .event {
+    font-size: 18px; 
+    color: #8D9980;  
+    letter-spacing: 2px;  
+    text-transform: uppercase;
+}
+
+/* Пожелания/примечания и подтверждение */
+.wishes-text {
+    font-size: 20px;
+    color: #6B705C;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: right;
+    padding-right: 125px;
+}
+
+.notes-text {
+    font-size: 20px;
+    color: #6B705C;  
+    letter-spacing: 0.5px;
+    line-height: 1.8;
+    font-weight: 300;
+    text-align: right;
+    padding-right: 125px;
+}
+
+/* Обратный отсчет */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 50px;  
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.countdown-number {
+    font-family: 'Great Vibes', cursive;  
+    font-size: 64px;  
+    color: #505745;  
+    line-height: 1;
+    font-weight: 400;
+}
+
+.countdown-label {
+    font-size: 14px;  
+    color: #8D9980;  
+    letter-spacing: 3px; 
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Карта */
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 5px; 
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(107, 112, 92, 0.15);  
+    border: 1px solid rgba(107, 112, 92, 0.15);  
+}
+
+.map-container iframe {
+    display: block;
+    filter: sepia(20%) saturate(80%);
+}
+
+.map-note {
+    font-size: 18px; 
+    color: #6B705C;  
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Дресс код */
+.dresscode-text {
+    font-size: 20px;  
+    color: #6B705C;  
+    line-height: 1.8;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.color-palette {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; 
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.color-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 3px 15px rgba(107, 112, 92, 0.2);
+    border: 2px solid rgba(107, 112, 92, 0.15);
+    transition: transform 0.3s ease;
+}
+/* Эффект при наведении */
+.color-circle:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Подпись(Тег) */
+.site-footer {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #FDFBF7; 
+    border-top: 1px solid rgba(107, 112, 92, 0.15); 
+}
+
+.credit {
+    font-size: 14px;
+    color: #8D9980; 
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-family: 'Great Vibes', cursive;
+    font-size: 20px;
+    color: #6B705C; 
+}
+
+.credit-year {
+    font-size: 12px;
+    color: #A5A58D; 
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Настройки под мобилки */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 15px;
+    }
+
+    .content {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+    }
+
+    .hero .main-title {
+        font-size: 100px;   
+    }
+    
+    .hero .names {
+        font-size: 36px;
+    }
+
+    .greeting .content {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center; 
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .greeting-title,
+    .section-title {
+        font-size: 48px;
+    }
+    
+    .greeting-text {
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: center;       
+        padding-right: 0;          
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    
+    .time-item .time {
+        font-size: 36px;
+    }
+    
+    .countdown-number {
+        font-size: 48px;
+    }
+    
+    .countdown-timer {
+        gap: 30px;
+    }
+    
+    .countdown-item {
+        min-width: 70px;
+    }
+
+    .wishes-text {
+        font-size: 18px;
+        text-align: center;        
+        padding-right: 0;          
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .notes-text {
+        font-size: 18px;
+        text-align: center;        
+        padding-right: 0;          
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .dresscode-text {
+        font-size: 18px;
+        text-align: center;        
+        padding-right: 0;          
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .location-text {
+        font-size: 18px;
+        text-align: center;        
+        line-height: 1.6;
+        padding-right: 0;          
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .map-note {
+        font-size: 16px;
+        text-align: center;        
+        padding-right: 0;          
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .color-circle {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .color-palette {
+        gap: 20px;
+    }
+
+    .credit {
+        font-size: 12px;
+    }
+    
+    .author {
+        font-size: 18px;
+    }
+
+    .time-item .event {
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .map-container {
+        height: 280px;
+        margin: 20px auto;
+    }
+}
+
+/* Для маленьких телефонов */
+@media (max-width: 480px) {
+    .hero .main-title {
+        font-size: 70px;
+    }
+    
+    .section {
+        padding: 30px 10px;
+    }
+
+    .content {
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .greeting-text,
+    .wishes-text,
+    .notes-text,
+    .dresscode-text,
+    .location-text {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero .names {
+        font-size: 28px;
+    }
+
+    .greeting-title,
+    .section-title {
+        font-size: 40px;
+    }
+
+    .countdown-number {
+        font-size: 40px;
+    }
+
+    .countdown-timer {
+        gap: 20px;
+    }
+
+    .color-circle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Разделитель */
+.section::after {
+    content: '🤍';
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #A5A58D;
+    opacity: 0.6;
+}
+
+.section:last-child::after {
+    display: none;
+}
